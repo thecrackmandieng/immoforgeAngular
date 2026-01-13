@@ -5,6 +5,8 @@ import { PublicComponent } from './public/public/public.component';
 
 export const routes: Routes = [
     { path: "", pathMatch: "full", redirectTo: "public" },
+
+
     {
         path: "home",
         component: HomeComponent,
@@ -16,6 +18,7 @@ export const routes: Routes = [
         ],
         canActivate: [AuthGuard]
     },
+
     {
         path: "public",
         component: PublicComponent,

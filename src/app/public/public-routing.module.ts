@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ListLoginComponent } from './login/list-login/list-login.component';
 
 const routes: Routes = [
+  
   {path:"",component:ListLoginComponent},
 {path:"login",component:ListLoginComponent}
 ];
@@ -11,4 +12,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class HomeRoutingModule { }
+export class PublicRoutingModule { }
