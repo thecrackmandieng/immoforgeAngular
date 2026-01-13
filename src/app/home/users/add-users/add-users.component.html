@@ -1,0 +1,173 @@
+<div class="modal-header" data-bs-theme="ligth">
+      <h1 class="modal-title fs-5">Ajouter users</h1>
+      <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.close()"></button>
+    </div>
+    <div class="modal-body">
+      <form [formGroup]="reactiveForm_add_users" 
+            (ngSubmit)="onSubmit_add_users()" 
+            #form_add_users="ngForm" 
+            class="row">
+        
+            <!-- Champ Uuid -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="uuid">Uuid</label>
+              <input id="uuid" class="form-control" 
+                     type="text" 
+                     formControlName="uuid" 
+                     placeholder="Uuid"  
+                     [ngClass]="{ 'is-invalid': submitted && f.uuid.errors }"/>
+              @if (submitted && f.uuid.errors) {
+                <div class="invalid-feedback">
+                  @if (f.uuid.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+<!-- Erreur : La clé étrangère role_id de la table users n'est pas référencée -->
+
+            <!-- Champ Prenom -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="prenom">Prenom</label>
+              <input id="prenom" class="form-control" 
+                     type="text" 
+                     formControlName="prenom" 
+                     placeholder="Prenom"  
+                     [ngClass]="{ 'is-invalid': submitted && f.prenom.errors }"/>
+              @if (submitted && f.prenom.errors) {
+                <div class="invalid-feedback">
+                  @if (f.prenom.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+
+            <!-- Champ Nom -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="nom">Nom</label>
+              <input id="nom" class="form-control" 
+                     type="text" 
+                     formControlName="nom" 
+                     placeholder="Nom"  
+                     [ngClass]="{ 'is-invalid': submitted && f.nom.errors }"/>
+              @if (submitted && f.nom.errors) {
+                <div class="invalid-feedback">
+                  @if (f.nom.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+
+            <!-- Champ Email -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="email">Email</label>
+              <input id="email" class="form-control" 
+                     type="text" 
+                     formControlName="email" 
+                     placeholder="Email"  
+                     [ngClass]="{ 'is-invalid': submitted && f.email.errors }"/>
+              @if (submitted && f.email.errors) {
+                <div class="invalid-feedback">
+                  @if (f.email.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+
+            <!-- Champ Telephone -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="telephone">Telephone</label>
+              <input id="telephone" class="form-control" 
+                     type="text" 
+                     formControlName="telephone" 
+                     placeholder="Telephone"  
+                     [ngClass]="{ 'is-invalid': submitted && f.telephone.errors }"/>
+              @if (submitted && f.telephone.errors) {
+                <div class="invalid-feedback">
+                  @if (f.telephone.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+
+            <!-- Champ Password Hash -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="password_hash">Password Hash</label>
+              <input id="password_hash" class="form-control" 
+                     type="text" 
+                     formControlName="password_hash" 
+                     placeholder="Password Hash"  
+                     [ngClass]="{ 'is-invalid': submitted && f.password_hash.errors }"/>
+              @if (submitted && f.password_hash.errors) {
+                <div class="invalid-feedback">
+                  @if (f.password_hash.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+<!-- Erreur : La clé étrangère statut_user_id de la table users n'est pas référencée -->
+
+            <!-- Champ Is Verified -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="is_verified">Is Verified</label>
+              <input id="is_verified" class="form-control" 
+                     type="text" 
+                     formControlName="is_verified" 
+                     placeholder="Is Verified"  
+                     [ngClass]="{ 'is-invalid': submitted && f.is_verified.errors }"/>
+              @if (submitted && f.is_verified.errors) {
+                <div class="invalid-feedback">
+                  @if (f.is_verified.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+
+            <!-- Champ Date Creation -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="date_creation">Date Creation</label>
+              <input id="date_creation" class="form-control" 
+                     type="text" 
+                     formControlName="date_creation" 
+                     placeholder="Date Creation"  
+                     [ngClass]="{ 'is-invalid': submitted && f.date_creation.errors }"/>
+              @if (submitted && f.date_creation.errors) {
+                <div class="invalid-feedback">
+                  @if (f.date_creation.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+
+            <!-- Champ Last Login -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="last_login">Last Login</label>
+              <input id="last_login" class="form-control" 
+                     type="text" 
+                     formControlName="last_login" 
+                     placeholder="Last Login"  
+                     [ngClass]="{ 'is-invalid': submitted && f.last_login.errors }"/>
+              @if (submitted && f.last_login.errors) {
+                <div class="invalid-feedback">
+                  @if (f.last_login.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-primary m-2" [disabled]="loading_add_users || loading_get_details_add_users_form"
+      (click)="form_add_users.ngSubmit.emit()">
+      {{ loading_add_users ? "En cours ..." : "Valider" }}
+      </button>
+      <button type="button" class="btn btn-outline-danger" (click)="activeModal.close()">Fermer</button>
+    </div>

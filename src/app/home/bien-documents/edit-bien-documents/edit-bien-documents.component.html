@@ -1,0 +1,68 @@
+<div class="modal-header" data-bs-theme="ligth">
+        <h1 class="modal-title fs-5">Modifier bien_documents</h1>
+        <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.close()"></button>
+    </div>
+    <div class="modal-body">
+      <form [formGroup]="reactiveForm_edit_bien_documents" (ngSubmit)="onSubmit_edit_bien_documents()" #form_edit_bien_documents="ngForm" class="row">
+        
+<!-- Erreur : La clé étrangère bien_id de la table bien_documents n'est pas référencée -->
+
+            <!-- Champ Nom Document -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="nom_document">Nom Document</label>
+              <input id="nom_document" class="form-control" 
+                     type="text" 
+                     formControlName="nom_document" 
+                     placeholder="Nom Document"  
+                     [ngClass]="{ 'is-invalid': submitted && f.nom_document.errors }"/>
+              @if (submitted && f.nom_document.errors) {
+                <div class="invalid-feedback">
+                  @if (f.nom_document.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+
+            <!-- Champ Url Document -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="url_document">Url Document</label>
+              <input id="url_document" class="form-control" 
+                     type="text" 
+                     formControlName="url_document" 
+                     placeholder="Url Document"  
+                     [ngClass]="{ 'is-invalid': submitted && f.url_document.errors }"/>
+              @if (submitted && f.url_document.errors) {
+                <div class="invalid-feedback">
+                  @if (f.url_document.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+
+            <!-- Champ Date Upload -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="date_upload">Date Upload</label>
+              <input id="date_upload" class="form-control" 
+                     type="text" 
+                     formControlName="date_upload" 
+                     placeholder="Date Upload"  
+                     [ngClass]="{ 'is-invalid': submitted && f.date_upload.errors }"/>
+              @if (submitted && f.date_upload.errors) {
+                <div class="invalid-feedback">
+                  @if (f.date_upload.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-primary m-2" [disabled]="loading_edit_bien_documents ||
+      loading_get_details_edit_bien_documents_form" (click)="form_edit_bien_documents.ngSubmit.emit()">
+          {{ loading_edit_bien_documents ? "En cours ..." : "Valider" }}
+      </button>
+      <button type="button" class="btn btn-outline-danger" (click)="activeModal.close()">Fermer</button>
+    </div>

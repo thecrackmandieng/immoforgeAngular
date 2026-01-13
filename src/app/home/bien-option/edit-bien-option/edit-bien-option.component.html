@@ -1,0 +1,52 @@
+<div class="modal-header" data-bs-theme="ligth">
+        <h1 class="modal-title fs-5">Modifier bien_option</h1>
+        <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.close()"></button>
+    </div>
+    <div class="modal-body">
+      <form [formGroup]="reactiveForm_edit_bien_option" (ngSubmit)="onSubmit_edit_bien_option()" #form_edit_bien_option="ngForm" class="row">
+        
+
+            <!-- Champ Bien Id -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="bien_id">Bien Id</label>
+              <input id="bien_id" class="form-control" 
+                     type="text" 
+                     formControlName="bien_id" 
+                     placeholder="Bien Id"  
+                     [ngClass]="{ 'is-invalid': submitted && f.bien_id.errors }"/>
+              @if (submitted && f.bien_id.errors) {
+                <div class="invalid-feedback">
+                  @if (f.bien_id.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+<!-- Erreur : La clé étrangère bien_id de la table bien_option n'est pas référencée -->
+
+            <!-- Champ Option Id -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="option_id">Option Id</label>
+              <input id="option_id" class="form-control" 
+                     type="text" 
+                     formControlName="option_id" 
+                     placeholder="Option Id"  
+                     [ngClass]="{ 'is-invalid': submitted && f.option_id.errors }"/>
+              @if (submitted && f.option_id.errors) {
+                <div class="invalid-feedback">
+                  @if (f.option_id.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+<!-- Erreur : La clé étrangère option_id de la table bien_option n'est pas référencée -->
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-primary m-2" [disabled]="loading_edit_bien_option ||
+      loading_get_details_edit_bien_option_form" (click)="form_edit_bien_option.ngSubmit.emit()">
+          {{ loading_edit_bien_option ? "En cours ..." : "Valider" }}
+      </button>
+      <button type="button" class="btn btn-outline-danger" (click)="activeModal.close()">Fermer</button>
+    </div>

@@ -1,0 +1,2607 @@
+{
+  "projectName": "projet1.angular",
+  "decription": "Fichier de configuration de Taf",
+  "taf_base_url": "http://localhost/taf-version6.0/",
+  "les_modules": [
+    {
+      "module": "home",
+      "les_tables": [
+        {
+          "table": "bien_documents",
+          "description": [
+            "id_doc",
+            "bien_id",
+            "nom_document",
+            "url_document",
+            "date_upload"
+          ],
+          "table_descriptions": {
+            "table_name": "bien_documents",
+            "cle_primaire": {
+              "Field": "id_doc",
+              "Type": "bigint",
+              "IS_NULLABLE": "NO",
+              "Default": null,
+              "Extra": "",
+              "Key": "PRI",
+              "REFERENCED_TABLE_NAME": null,
+              "REFERENCED_COLUMN_NAME": null,
+              "explications": "clé primaire"
+            },
+            "les_colonnes": [
+              {
+                "Field": "id_doc",
+                "Type": "bigint",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "PRI",
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": "clé primaire"
+              },
+              {
+                "Field": "bien_id",
+                "Type": "bigint",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "MUL",
+                "REFERENCED_TABLE_NAME": "biens",
+                "REFERENCED_COLUMN_NAME": "id_bien",
+                "explications": "clé étrangère liée à la colonne id_bien de la table biens"
+              },
+              {
+                "Field": "nom_document",
+                "Type": "varchar",
+                "IS_NULLABLE": "YES",
+                "Default": null,
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "url_document",
+                "Type": "text",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "date_upload",
+                "Type": "timestamp",
+                "IS_NULLABLE": "YES",
+                "Default": "CURRENT_TIMESTAMP",
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              }
+            ]
+          },
+          "les_types": [
+            "add",
+            "edit",
+            "list",
+            "details",
+            "type"
+          ]
+        },
+        {
+          "table": "bien_images",
+          "description": [
+            "id_image",
+            "bien_id",
+            "url_image",
+            "ordre",
+            "date_upload"
+          ],
+          "table_descriptions": {
+            "table_name": "bien_images",
+            "cle_primaire": {
+              "Field": "id_image",
+              "Type": "bigint",
+              "IS_NULLABLE": "NO",
+              "Default": null,
+              "Extra": "",
+              "Key": "PRI",
+              "REFERENCED_TABLE_NAME": null,
+              "REFERENCED_COLUMN_NAME": null,
+              "explications": "clé primaire"
+            },
+            "les_colonnes": [
+              {
+                "Field": "id_image",
+                "Type": "bigint",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "PRI",
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": "clé primaire"
+              },
+              {
+                "Field": "bien_id",
+                "Type": "bigint",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "MUL",
+                "REFERENCED_TABLE_NAME": "biens",
+                "REFERENCED_COLUMN_NAME": "id_bien",
+                "explications": "clé étrangère liée à la colonne id_bien de la table biens"
+              },
+              {
+                "Field": "url_image",
+                "Type": "text",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "ordre",
+                "Type": "int",
+                "IS_NULLABLE": "YES",
+                "Default": "1",
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "date_upload",
+                "Type": "timestamp",
+                "IS_NULLABLE": "YES",
+                "Default": "CURRENT_TIMESTAMP",
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              }
+            ]
+          },
+          "les_types": [
+            "add",
+            "edit",
+            "list",
+            "details",
+            "type"
+          ]
+        },
+        {
+          "table": "bien_option",
+          "description": [
+            "id",
+            "bien_id",
+            "option_id"
+          ],
+          "table_descriptions": {
+            "table_name": "bien_option",
+            "cle_primaire": {
+              "Field": "id",
+              "Type": "bigint",
+              "IS_NULLABLE": "NO",
+              "Default": null,
+              "Extra": "",
+              "Key": "PRI",
+              "REFERENCED_TABLE_NAME": null,
+              "REFERENCED_COLUMN_NAME": null,
+              "explications": "clé primaire"
+            },
+            "les_colonnes": [
+              {
+                "Field": "id",
+                "Type": "bigint",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "PRI",
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": "clé primaire"
+              },
+              {
+                "Field": "bien_id",
+                "Type": "bigint",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "UNIQUE",
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "bien_id",
+                "Type": "bigint",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "MUL",
+                "REFERENCED_TABLE_NAME": "biens",
+                "REFERENCED_COLUMN_NAME": "id_bien",
+                "explications": "clé étrangère liée à la colonne id_bien de la table biens"
+              },
+              {
+                "Field": "option_id",
+                "Type": "int",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "UNIQUE",
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "option_id",
+                "Type": "int",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "MUL",
+                "REFERENCED_TABLE_NAME": "options_catalogue",
+                "REFERENCED_COLUMN_NAME": "id_option",
+                "explications": "clé étrangère liée à la colonne id_option de la table options_catalogue"
+              }
+            ]
+          },
+          "les_types": [
+            "add",
+            "edit",
+            "list",
+            "details",
+            "type"
+          ]
+        },
+        {
+          "table": "bien_tarifs",
+          "description": [
+            "id_tarif",
+            "bien_id",
+            "type_tarif_id",
+            "montant",
+            "devise",
+            "date_debut",
+            "date_fin",
+            "actif"
+          ],
+          "table_descriptions": {
+            "table_name": "bien_tarifs",
+            "cle_primaire": {
+              "Field": "id_tarif",
+              "Type": "bigint",
+              "IS_NULLABLE": "NO",
+              "Default": null,
+              "Extra": "",
+              "Key": "PRI",
+              "REFERENCED_TABLE_NAME": null,
+              "REFERENCED_COLUMN_NAME": null,
+              "explications": "clé primaire"
+            },
+            "les_colonnes": [
+              {
+                "Field": "id_tarif",
+                "Type": "bigint",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "PRI",
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": "clé primaire"
+              },
+              {
+                "Field": "bien_id",
+                "Type": "bigint",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "MUL",
+                "REFERENCED_TABLE_NAME": "biens",
+                "REFERENCED_COLUMN_NAME": "id_bien",
+                "explications": "clé étrangère liée à la colonne id_bien de la table biens"
+              },
+              {
+                "Field": "type_tarif_id",
+                "Type": "int",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "MUL",
+                "REFERENCED_TABLE_NAME": "types_tarif",
+                "REFERENCED_COLUMN_NAME": "id_type_tarif",
+                "explications": "clé étrangère liée à la colonne id_type_tarif de la table types_tarif"
+              },
+              {
+                "Field": "montant",
+                "Type": "decimal",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "devise",
+                "Type": "varchar",
+                "IS_NULLABLE": "YES",
+                "Default": "XOF",
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "date_debut",
+                "Type": "date",
+                "IS_NULLABLE": "YES",
+                "Default": null,
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "date_fin",
+                "Type": "date",
+                "IS_NULLABLE": "YES",
+                "Default": null,
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "actif",
+                "Type": "tinyint",
+                "IS_NULLABLE": "YES",
+                "Default": "1",
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              }
+            ]
+          },
+          "les_types": [
+            "add",
+            "edit",
+            "list",
+            "details",
+            "type"
+          ]
+        },
+        {
+          "table": "biens",
+          "description": [
+            "id_bien",
+            "uuid",
+            "proprietaire_user_id",
+            "type_bien_id",
+            "etat_bien_id",
+            "statut_validation_id",
+            "titre",
+            "description",
+            "region_id",
+            "zone_id",
+            "adresse_detaillee",
+            "latitude",
+            "longitude",
+            "superficie",
+            "chambres",
+            "salles_bain",
+            "capacite",
+            "prix",
+            "devise",
+            "date_publication",
+            "date_modification",
+            "raison_refus",
+            "is_archived"
+          ],
+          "table_descriptions": {
+            "table_name": "biens",
+            "cle_primaire": {
+              "Field": "id_bien",
+              "Type": "bigint",
+              "IS_NULLABLE": "NO",
+              "Default": null,
+              "Extra": "",
+              "Key": "PRI",
+              "REFERENCED_TABLE_NAME": null,
+              "REFERENCED_COLUMN_NAME": null,
+              "explications": "clé primaire"
+            },
+            "les_colonnes": [
+              {
+                "Field": "id_bien",
+                "Type": "bigint",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "PRI",
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": "clé primaire"
+              },
+              {
+                "Field": "uuid",
+                "Type": "char",
+                "IS_NULLABLE": "NO",
+                "Default": "uuid()",
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "proprietaire_user_id",
+                "Type": "bigint",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "MUL",
+                "REFERENCED_TABLE_NAME": "users",
+                "REFERENCED_COLUMN_NAME": "id",
+                "explications": "clé étrangère liée à la colonne id de la table users"
+              },
+              {
+                "Field": "type_bien_id",
+                "Type": "int",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "MUL",
+                "REFERENCED_TABLE_NAME": "types_bien",
+                "REFERENCED_COLUMN_NAME": "id_type_bien",
+                "explications": "clé étrangère liée à la colonne id_type_bien de la table types_bien"
+              },
+              {
+                "Field": "etat_bien_id",
+                "Type": "int",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "MUL",
+                "REFERENCED_TABLE_NAME": "etats_bien",
+                "REFERENCED_COLUMN_NAME": "id_etat_bien",
+                "explications": "clé étrangère liée à la colonne id_etat_bien de la table etats_bien"
+              },
+              {
+                "Field": "statut_validation_id",
+                "Type": "int",
+                "IS_NULLABLE": "NO",
+                "Default": "1",
+                "Extra": "",
+                "Key": "MUL",
+                "REFERENCED_TABLE_NAME": "statut_validation_bien",
+                "REFERENCED_COLUMN_NAME": "id_statut_val",
+                "explications": "clé étrangère liée à la colonne id_statut_val de la table statut_validation_bien"
+              },
+              {
+                "Field": "titre",
+                "Type": "varchar",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "description",
+                "Type": "text",
+                "IS_NULLABLE": "YES",
+                "Default": null,
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "region_id",
+                "Type": "int",
+                "IS_NULLABLE": "YES",
+                "Default": null,
+                "Extra": "",
+                "Key": "MUL",
+                "REFERENCED_TABLE_NAME": "regions",
+                "REFERENCED_COLUMN_NAME": "id_region",
+                "explications": "clé étrangère liée à la colonne id_region de la table regions"
+              },
+              {
+                "Field": "zone_id",
+                "Type": "int",
+                "IS_NULLABLE": "YES",
+                "Default": null,
+                "Extra": "",
+                "Key": "MUL",
+                "REFERENCED_TABLE_NAME": "zones",
+                "REFERENCED_COLUMN_NAME": "id_zone",
+                "explications": "clé étrangère liée à la colonne id_zone de la table zones"
+              },
+              {
+                "Field": "adresse_detaillee",
+                "Type": "varchar",
+                "IS_NULLABLE": "YES",
+                "Default": null,
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "latitude",
+                "Type": "decimal",
+                "IS_NULLABLE": "YES",
+                "Default": null,
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "longitude",
+                "Type": "decimal",
+                "IS_NULLABLE": "YES",
+                "Default": null,
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "superficie",
+                "Type": "decimal",
+                "IS_NULLABLE": "YES",
+                "Default": null,
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "chambres",
+                "Type": "int",
+                "IS_NULLABLE": "YES",
+                "Default": "0",
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "salles_bain",
+                "Type": "int",
+                "IS_NULLABLE": "YES",
+                "Default": "0",
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "capacite",
+                "Type": "int",
+                "IS_NULLABLE": "YES",
+                "Default": "1",
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "prix",
+                "Type": "decimal",
+                "IS_NULLABLE": "YES",
+                "Default": null,
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "devise",
+                "Type": "varchar",
+                "IS_NULLABLE": "YES",
+                "Default": "XOF",
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "date_publication",
+                "Type": "timestamp",
+                "IS_NULLABLE": "YES",
+                "Default": "CURRENT_TIMESTAMP",
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "date_modification",
+                "Type": "timestamp",
+                "IS_NULLABLE": "YES",
+                "Default": null,
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "raison_refus",
+                "Type": "text",
+                "IS_NULLABLE": "YES",
+                "Default": null,
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "is_archived",
+                "Type": "tinyint",
+                "IS_NULLABLE": "YES",
+                "Default": "0",
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              }
+            ]
+          },
+          "les_types": [
+            "add",
+            "edit",
+            "list",
+            "details",
+            "type"
+          ]
+        },
+        {
+          "table": "clients",
+          "description": [
+            "id_client",
+            "user_id",
+            "preferences",
+            "date_creation"
+          ],
+          "table_descriptions": {
+            "table_name": "clients",
+            "cle_primaire": {
+              "Field": "id_client",
+              "Type": "bigint",
+              "IS_NULLABLE": "NO",
+              "Default": null,
+              "Extra": "",
+              "Key": "PRI",
+              "REFERENCED_TABLE_NAME": null,
+              "REFERENCED_COLUMN_NAME": null,
+              "explications": "clé primaire"
+            },
+            "les_colonnes": [
+              {
+                "Field": "id_client",
+                "Type": "bigint",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "PRI",
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": "clé primaire"
+              },
+              {
+                "Field": "user_id",
+                "Type": "bigint",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "UNIQUE",
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "user_id",
+                "Type": "bigint",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "MUL",
+                "REFERENCED_TABLE_NAME": "users",
+                "REFERENCED_COLUMN_NAME": "id",
+                "explications": "clé étrangère liée à la colonne id de la table users"
+              },
+              {
+                "Field": "preferences",
+                "Type": "json",
+                "IS_NULLABLE": "YES",
+                "Default": null,
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "date_creation",
+                "Type": "timestamp",
+                "IS_NULLABLE": "YES",
+                "Default": "CURRENT_TIMESTAMP",
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              }
+            ]
+          },
+          "les_types": [
+            "add",
+            "edit",
+            "list",
+            "details",
+            "type"
+          ]
+        },
+        {
+          "table": "demandes",
+          "description": [
+            "id_demande",
+            "uuid",
+            "client_user_id",
+            "bien_id",
+            "type_demande",
+            "etat_demande_id",
+            "date_debut",
+            "date_fin",
+            "montant_estime",
+            "acompte_payee",
+            "mode_paiement_acompte_id",
+            "message",
+            "date_demande"
+          ],
+          "table_descriptions": {
+            "table_name": "demandes",
+            "cle_primaire": {
+              "Field": "id_demande",
+              "Type": "bigint",
+              "IS_NULLABLE": "NO",
+              "Default": null,
+              "Extra": "",
+              "Key": "PRI",
+              "REFERENCED_TABLE_NAME": null,
+              "REFERENCED_COLUMN_NAME": null,
+              "explications": "clé primaire"
+            },
+            "les_colonnes": [
+              {
+                "Field": "id_demande",
+                "Type": "bigint",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "PRI",
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": "clé primaire"
+              },
+              {
+                "Field": "uuid",
+                "Type": "char",
+                "IS_NULLABLE": "NO",
+                "Default": "uuid()",
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "client_user_id",
+                "Type": "bigint",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "MUL",
+                "REFERENCED_TABLE_NAME": "users",
+                "REFERENCED_COLUMN_NAME": "id",
+                "explications": "clé étrangère liée à la colonne id de la table users"
+              },
+              {
+                "Field": "bien_id",
+                "Type": "bigint",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "MUL",
+                "REFERENCED_TABLE_NAME": "biens",
+                "REFERENCED_COLUMN_NAME": "id_bien",
+                "explications": "clé étrangère liée à la colonne id_bien de la table biens"
+              },
+              {
+                "Field": "type_demande",
+                "Type": "varchar",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "etat_demande_id",
+                "Type": "int",
+                "IS_NULLABLE": "NO",
+                "Default": "1",
+                "Extra": "",
+                "Key": "MUL",
+                "REFERENCED_TABLE_NAME": "etats_demande",
+                "REFERENCED_COLUMN_NAME": "id_etat_demande",
+                "explications": "clé étrangère liée à la colonne id_etat_demande de la table etats_demande"
+              },
+              {
+                "Field": "date_debut",
+                "Type": "date",
+                "IS_NULLABLE": "YES",
+                "Default": null,
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "date_fin",
+                "Type": "date",
+                "IS_NULLABLE": "YES",
+                "Default": null,
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "montant_estime",
+                "Type": "decimal",
+                "IS_NULLABLE": "YES",
+                "Default": "0.00",
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "acompte_payee",
+                "Type": "tinyint",
+                "IS_NULLABLE": "YES",
+                "Default": "0",
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "mode_paiement_acompte_id",
+                "Type": "int",
+                "IS_NULLABLE": "YES",
+                "Default": null,
+                "Extra": "",
+                "Key": "MUL",
+                "REFERENCED_TABLE_NAME": "modes_paiement",
+                "REFERENCED_COLUMN_NAME": "id_mode",
+                "explications": "clé étrangère liée à la colonne id_mode de la table modes_paiement"
+              },
+              {
+                "Field": "message",
+                "Type": "text",
+                "IS_NULLABLE": "YES",
+                "Default": null,
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "date_demande",
+                "Type": "timestamp",
+                "IS_NULLABLE": "YES",
+                "Default": "CURRENT_TIMESTAMP",
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              }
+            ]
+          },
+          "les_types": [
+            "add",
+            "edit",
+            "list",
+            "details",
+            "type"
+          ]
+        },
+        {
+          "table": "etats_bien",
+          "description": [
+            "id_etat_bien",
+            "code",
+            "libelle"
+          ],
+          "table_descriptions": {
+            "table_name": "etats_bien",
+            "cle_primaire": {
+              "Field": "id_etat_bien",
+              "Type": "int",
+              "IS_NULLABLE": "NO",
+              "Default": null,
+              "Extra": "",
+              "Key": "PRI",
+              "REFERENCED_TABLE_NAME": null,
+              "REFERENCED_COLUMN_NAME": null,
+              "explications": "clé primaire"
+            },
+            "les_colonnes": [
+              {
+                "Field": "id_etat_bien",
+                "Type": "int",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "PRI",
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": "clé primaire"
+              },
+              {
+                "Field": "code",
+                "Type": "varchar",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "UNIQUE",
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "libelle",
+                "Type": "varchar",
+                "IS_NULLABLE": "YES",
+                "Default": null,
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              }
+            ]
+          },
+          "les_types": [
+            "add",
+            "edit",
+            "list",
+            "details",
+            "type"
+          ]
+        },
+        {
+          "table": "etats_demande",
+          "description": [
+            "id_etat_demande",
+            "code",
+            "libelle"
+          ],
+          "table_descriptions": {
+            "table_name": "etats_demande",
+            "cle_primaire": {
+              "Field": "id_etat_demande",
+              "Type": "int",
+              "IS_NULLABLE": "NO",
+              "Default": null,
+              "Extra": "",
+              "Key": "PRI",
+              "REFERENCED_TABLE_NAME": null,
+              "REFERENCED_COLUMN_NAME": null,
+              "explications": "clé primaire"
+            },
+            "les_colonnes": [
+              {
+                "Field": "id_etat_demande",
+                "Type": "int",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "PRI",
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": "clé primaire"
+              },
+              {
+                "Field": "code",
+                "Type": "varchar",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "UNIQUE",
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "libelle",
+                "Type": "varchar",
+                "IS_NULLABLE": "YES",
+                "Default": null,
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              }
+            ]
+          },
+          "les_types": [
+            "add",
+            "edit",
+            "list",
+            "details",
+            "type"
+          ]
+        },
+        {
+          "table": "favoris",
+          "description": [
+            "id_favori",
+            "user_id",
+            "bien_id",
+            "date_ajout"
+          ],
+          "table_descriptions": {
+            "table_name": "favoris",
+            "cle_primaire": {
+              "Field": "id_favori",
+              "Type": "bigint",
+              "IS_NULLABLE": "NO",
+              "Default": null,
+              "Extra": "",
+              "Key": "PRI",
+              "REFERENCED_TABLE_NAME": null,
+              "REFERENCED_COLUMN_NAME": null,
+              "explications": "clé primaire"
+            },
+            "les_colonnes": [
+              {
+                "Field": "id_favori",
+                "Type": "bigint",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "PRI",
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": "clé primaire"
+              },
+              {
+                "Field": "user_id",
+                "Type": "bigint",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "UNIQUE",
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "user_id",
+                "Type": "bigint",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "MUL",
+                "REFERENCED_TABLE_NAME": "users",
+                "REFERENCED_COLUMN_NAME": "id",
+                "explications": "clé étrangère liée à la colonne id de la table users"
+              },
+              {
+                "Field": "bien_id",
+                "Type": "bigint",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "UNIQUE",
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "bien_id",
+                "Type": "bigint",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "MUL",
+                "REFERENCED_TABLE_NAME": "biens",
+                "REFERENCED_COLUMN_NAME": "id_bien",
+                "explications": "clé étrangère liée à la colonne id_bien de la table biens"
+              },
+              {
+                "Field": "date_ajout",
+                "Type": "timestamp",
+                "IS_NULLABLE": "YES",
+                "Default": "CURRENT_TIMESTAMP",
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              }
+            ]
+          },
+          "les_types": [
+            "add",
+            "edit",
+            "list",
+            "details",
+            "type"
+          ]
+        },
+        {
+          "table": "modes_paiement",
+          "description": [
+            "id_mode",
+            "code",
+            "libelle"
+          ],
+          "table_descriptions": {
+            "table_name": "modes_paiement",
+            "cle_primaire": {
+              "Field": "id_mode",
+              "Type": "int",
+              "IS_NULLABLE": "NO",
+              "Default": null,
+              "Extra": "",
+              "Key": "PRI",
+              "REFERENCED_TABLE_NAME": null,
+              "REFERENCED_COLUMN_NAME": null,
+              "explications": "clé primaire"
+            },
+            "les_colonnes": [
+              {
+                "Field": "id_mode",
+                "Type": "int",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "PRI",
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": "clé primaire"
+              },
+              {
+                "Field": "code",
+                "Type": "varchar",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "UNIQUE",
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "libelle",
+                "Type": "varchar",
+                "IS_NULLABLE": "YES",
+                "Default": null,
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              }
+            ]
+          },
+          "les_types": [
+            "add",
+            "edit",
+            "list",
+            "details",
+            "type"
+          ]
+        },
+        {
+          "table": "options_catalogue",
+          "description": [
+            "id_option",
+            "code",
+            "libelle"
+          ],
+          "table_descriptions": {
+            "table_name": "options_catalogue",
+            "cle_primaire": {
+              "Field": "id_option",
+              "Type": "int",
+              "IS_NULLABLE": "NO",
+              "Default": null,
+              "Extra": "",
+              "Key": "PRI",
+              "REFERENCED_TABLE_NAME": null,
+              "REFERENCED_COLUMN_NAME": null,
+              "explications": "clé primaire"
+            },
+            "les_colonnes": [
+              {
+                "Field": "id_option",
+                "Type": "int",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "PRI",
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": "clé primaire"
+              },
+              {
+                "Field": "code",
+                "Type": "varchar",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "UNIQUE",
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "libelle",
+                "Type": "varchar",
+                "IS_NULLABLE": "YES",
+                "Default": null,
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              }
+            ]
+          },
+          "les_types": [
+            "add",
+            "edit",
+            "list",
+            "details",
+            "type"
+          ]
+        },
+        {
+          "table": "permissions",
+          "description": [
+            "id_perm",
+            "code",
+            "description"
+          ],
+          "table_descriptions": {
+            "table_name": "permissions",
+            "cle_primaire": {
+              "Field": "id_perm",
+              "Type": "int",
+              "IS_NULLABLE": "NO",
+              "Default": null,
+              "Extra": "",
+              "Key": "PRI",
+              "REFERENCED_TABLE_NAME": null,
+              "REFERENCED_COLUMN_NAME": null,
+              "explications": "clé primaire"
+            },
+            "les_colonnes": [
+              {
+                "Field": "id_perm",
+                "Type": "int",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "PRI",
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": "clé primaire"
+              },
+              {
+                "Field": "code",
+                "Type": "varchar",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "UNIQUE",
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "description",
+                "Type": "varchar",
+                "IS_NULLABLE": "YES",
+                "Default": null,
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              }
+            ]
+          },
+          "les_types": [
+            "add",
+            "edit",
+            "list",
+            "details",
+            "type"
+          ]
+        },
+        {
+          "table": "plans_tarifaires",
+          "description": [
+            "id_plan",
+            "code",
+            "libelle",
+            "prix_mensuel",
+            "nb_biens_max",
+            "boost_visibilite",
+            "stats_avancees",
+            "badge_verifie",
+            "actif"
+          ],
+          "table_descriptions": {
+            "table_name": "plans_tarifaires",
+            "cle_primaire": {
+              "Field": "id_plan",
+              "Type": "int",
+              "IS_NULLABLE": "NO",
+              "Default": null,
+              "Extra": "",
+              "Key": "PRI",
+              "REFERENCED_TABLE_NAME": null,
+              "REFERENCED_COLUMN_NAME": null,
+              "explications": "clé primaire"
+            },
+            "les_colonnes": [
+              {
+                "Field": "id_plan",
+                "Type": "int",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "PRI",
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": "clé primaire"
+              },
+              {
+                "Field": "code",
+                "Type": "varchar",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "UNIQUE",
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "libelle",
+                "Type": "varchar",
+                "IS_NULLABLE": "YES",
+                "Default": null,
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "prix_mensuel",
+                "Type": "decimal",
+                "IS_NULLABLE": "YES",
+                "Default": "0.00",
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "nb_biens_max",
+                "Type": "int",
+                "IS_NULLABLE": "YES",
+                "Default": "5",
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "boost_visibilite",
+                "Type": "tinyint",
+                "IS_NULLABLE": "YES",
+                "Default": "0",
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "stats_avancees",
+                "Type": "tinyint",
+                "IS_NULLABLE": "YES",
+                "Default": "0",
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "badge_verifie",
+                "Type": "tinyint",
+                "IS_NULLABLE": "YES",
+                "Default": "0",
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "actif",
+                "Type": "tinyint",
+                "IS_NULLABLE": "YES",
+                "Default": "1",
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              }
+            ]
+          },
+          "les_types": [
+            "add",
+            "edit",
+            "list",
+            "details",
+            "type"
+          ]
+        },
+        {
+          "table": "proprietaires",
+          "description": [
+            "id_proprietaire",
+            "user_id",
+            "entreprise_nom",
+            "rccm",
+            "ninea",
+            "adresse",
+            "kyc_status",
+            "date_creation"
+          ],
+          "table_descriptions": {
+            "table_name": "proprietaires",
+            "cle_primaire": {
+              "Field": "id_proprietaire",
+              "Type": "bigint",
+              "IS_NULLABLE": "NO",
+              "Default": null,
+              "Extra": "",
+              "Key": "PRI",
+              "REFERENCED_TABLE_NAME": null,
+              "REFERENCED_COLUMN_NAME": null,
+              "explications": "clé primaire"
+            },
+            "les_colonnes": [
+              {
+                "Field": "id_proprietaire",
+                "Type": "bigint",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "PRI",
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": "clé primaire"
+              },
+              {
+                "Field": "user_id",
+                "Type": "bigint",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "UNIQUE",
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "user_id",
+                "Type": "bigint",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "MUL",
+                "REFERENCED_TABLE_NAME": "users",
+                "REFERENCED_COLUMN_NAME": "id",
+                "explications": "clé étrangère liée à la colonne id de la table users"
+              },
+              {
+                "Field": "entreprise_nom",
+                "Type": "varchar",
+                "IS_NULLABLE": "YES",
+                "Default": null,
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "rccm",
+                "Type": "varchar",
+                "IS_NULLABLE": "YES",
+                "Default": null,
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "ninea",
+                "Type": "varchar",
+                "IS_NULLABLE": "YES",
+                "Default": null,
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "adresse",
+                "Type": "text",
+                "IS_NULLABLE": "YES",
+                "Default": null,
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "kyc_status",
+                "Type": "enum",
+                "IS_NULLABLE": "YES",
+                "Default": "pending",
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "date_creation",
+                "Type": "timestamp",
+                "IS_NULLABLE": "YES",
+                "Default": "CURRENT_TIMESTAMP",
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              }
+            ]
+          },
+          "les_types": [
+            "add",
+            "edit",
+            "list",
+            "details",
+            "type"
+          ]
+        },
+        {
+          "table": "regions",
+          "description": [
+            "id_region",
+            "code",
+            "libelle"
+          ],
+          "table_descriptions": {
+            "table_name": "regions",
+            "cle_primaire": {
+              "Field": "id_region",
+              "Type": "int",
+              "IS_NULLABLE": "NO",
+              "Default": null,
+              "Extra": "",
+              "Key": "PRI",
+              "REFERENCED_TABLE_NAME": null,
+              "REFERENCED_COLUMN_NAME": null,
+              "explications": "clé primaire"
+            },
+            "les_colonnes": [
+              {
+                "Field": "id_region",
+                "Type": "int",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "PRI",
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": "clé primaire"
+              },
+              {
+                "Field": "code",
+                "Type": "varchar",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "UNIQUE",
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "libelle",
+                "Type": "varchar",
+                "IS_NULLABLE": "YES",
+                "Default": null,
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              }
+            ]
+          },
+          "les_types": [
+            "add",
+            "edit",
+            "list",
+            "details",
+            "type"
+          ]
+        },
+        {
+          "table": "regles_commission",
+          "description": [
+            "id_comm",
+            "type_transaction",
+            "pourcentage",
+            "montant_fixe",
+            "actif"
+          ],
+          "table_descriptions": {
+            "table_name": "regles_commission",
+            "cle_primaire": {
+              "Field": "id_comm",
+              "Type": "int",
+              "IS_NULLABLE": "NO",
+              "Default": null,
+              "Extra": "",
+              "Key": "PRI",
+              "REFERENCED_TABLE_NAME": null,
+              "REFERENCED_COLUMN_NAME": null,
+              "explications": "clé primaire"
+            },
+            "les_colonnes": [
+              {
+                "Field": "id_comm",
+                "Type": "int",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "PRI",
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": "clé primaire"
+              },
+              {
+                "Field": "type_transaction",
+                "Type": "varchar",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "pourcentage",
+                "Type": "decimal",
+                "IS_NULLABLE": "YES",
+                "Default": "0.00",
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "montant_fixe",
+                "Type": "decimal",
+                "IS_NULLABLE": "YES",
+                "Default": "0.00",
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "actif",
+                "Type": "tinyint",
+                "IS_NULLABLE": "YES",
+                "Default": "1",
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              }
+            ]
+          },
+          "les_types": [
+            "add",
+            "edit",
+            "list",
+            "details",
+            "type"
+          ]
+        },
+        {
+          "table": "role_permission",
+          "description": [
+            "id_role",
+            "id_perm"
+          ],
+          "table_descriptions": {
+            "table_name": "role_permission",
+            "cle_primaire": {
+              "Field": "id_perm",
+              "Type": "int",
+              "IS_NULLABLE": "NO",
+              "Default": null,
+              "Extra": "",
+              "Key": "PRI",
+              "REFERENCED_TABLE_NAME": null,
+              "REFERENCED_COLUMN_NAME": null,
+              "explications": "clé primaire"
+            },
+            "les_colonnes": [
+              {
+                "Field": "id_role",
+                "Type": "int",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "PRI",
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": "clé primaire"
+              },
+              {
+                "Field": "id_role",
+                "Type": "int",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "MUL",
+                "REFERENCED_TABLE_NAME": "roles",
+                "REFERENCED_COLUMN_NAME": "id_role",
+                "explications": "clé étrangère liée à la colonne id_role de la table roles"
+              },
+              {
+                "Field": "id_perm",
+                "Type": "int",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "PRI",
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": "clé primaire"
+              },
+              {
+                "Field": "id_perm",
+                "Type": "int",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "MUL",
+                "REFERENCED_TABLE_NAME": "permissions",
+                "REFERENCED_COLUMN_NAME": "id_perm",
+                "explications": "clé étrangère liée à la colonne id_perm de la table permissions"
+              }
+            ]
+          },
+          "les_types": [
+            "add",
+            "edit",
+            "list",
+            "details",
+            "type"
+          ]
+        },
+        {
+          "table": "roles",
+          "description": [
+            "id_role",
+            "code",
+            "libelle"
+          ],
+          "table_descriptions": {
+            "table_name": "roles",
+            "cle_primaire": {
+              "Field": "id_role",
+              "Type": "int",
+              "IS_NULLABLE": "NO",
+              "Default": null,
+              "Extra": "",
+              "Key": "PRI",
+              "REFERENCED_TABLE_NAME": null,
+              "REFERENCED_COLUMN_NAME": null,
+              "explications": "clé primaire"
+            },
+            "les_colonnes": [
+              {
+                "Field": "id_role",
+                "Type": "int",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "PRI",
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": "clé primaire"
+              },
+              {
+                "Field": "code",
+                "Type": "varchar",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "UNIQUE",
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "libelle",
+                "Type": "varchar",
+                "IS_NULLABLE": "YES",
+                "Default": null,
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              }
+            ]
+          },
+          "les_types": [
+            "add",
+            "edit",
+            "list",
+            "details",
+            "type"
+          ]
+        },
+        {
+          "table": "statut_user",
+          "description": [
+            "id_statut_user",
+            "code",
+            "libelle"
+          ],
+          "table_descriptions": {
+            "table_name": "statut_user",
+            "cle_primaire": {
+              "Field": "id_statut_user",
+              "Type": "int",
+              "IS_NULLABLE": "NO",
+              "Default": null,
+              "Extra": "",
+              "Key": "PRI",
+              "REFERENCED_TABLE_NAME": null,
+              "REFERENCED_COLUMN_NAME": null,
+              "explications": "clé primaire"
+            },
+            "les_colonnes": [
+              {
+                "Field": "id_statut_user",
+                "Type": "int",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "PRI",
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": "clé primaire"
+              },
+              {
+                "Field": "code",
+                "Type": "varchar",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "UNIQUE",
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "libelle",
+                "Type": "varchar",
+                "IS_NULLABLE": "YES",
+                "Default": null,
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              }
+            ]
+          },
+          "les_types": [
+            "add",
+            "edit",
+            "list",
+            "details",
+            "type"
+          ]
+        },
+        {
+          "table": "statut_validation_bien",
+          "description": [
+            "id_statut_val",
+            "code",
+            "libelle"
+          ],
+          "table_descriptions": {
+            "table_name": "statut_validation_bien",
+            "cle_primaire": {
+              "Field": "id_statut_val",
+              "Type": "int",
+              "IS_NULLABLE": "NO",
+              "Default": null,
+              "Extra": "",
+              "Key": "PRI",
+              "REFERENCED_TABLE_NAME": null,
+              "REFERENCED_COLUMN_NAME": null,
+              "explications": "clé primaire"
+            },
+            "les_colonnes": [
+              {
+                "Field": "id_statut_val",
+                "Type": "int",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "PRI",
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": "clé primaire"
+              },
+              {
+                "Field": "code",
+                "Type": "varchar",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "UNIQUE",
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "libelle",
+                "Type": "varchar",
+                "IS_NULLABLE": "YES",
+                "Default": null,
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              }
+            ]
+          },
+          "les_types": [
+            "add",
+            "edit",
+            "list",
+            "details",
+            "type"
+          ]
+        },
+        {
+          "table": "types_bien",
+          "description": [
+            "id_type_bien",
+            "code",
+            "libelle"
+          ],
+          "table_descriptions": {
+            "table_name": "types_bien",
+            "cle_primaire": {
+              "Field": "id_type_bien",
+              "Type": "int",
+              "IS_NULLABLE": "NO",
+              "Default": null,
+              "Extra": "",
+              "Key": "PRI",
+              "REFERENCED_TABLE_NAME": null,
+              "REFERENCED_COLUMN_NAME": null,
+              "explications": "clé primaire"
+            },
+            "les_colonnes": [
+              {
+                "Field": "id_type_bien",
+                "Type": "int",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "PRI",
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": "clé primaire"
+              },
+              {
+                "Field": "code",
+                "Type": "varchar",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "UNIQUE",
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "libelle",
+                "Type": "varchar",
+                "IS_NULLABLE": "YES",
+                "Default": null,
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              }
+            ]
+          },
+          "les_types": [
+            "add",
+            "edit",
+            "list",
+            "details",
+            "type"
+          ]
+        },
+        {
+          "table": "types_tarif",
+          "description": [
+            "id_type_tarif",
+            "code",
+            "libelle"
+          ],
+          "table_descriptions": {
+            "table_name": "types_tarif",
+            "cle_primaire": {
+              "Field": "id_type_tarif",
+              "Type": "int",
+              "IS_NULLABLE": "NO",
+              "Default": null,
+              "Extra": "",
+              "Key": "PRI",
+              "REFERENCED_TABLE_NAME": null,
+              "REFERENCED_COLUMN_NAME": null,
+              "explications": "clé primaire"
+            },
+            "les_colonnes": [
+              {
+                "Field": "id_type_tarif",
+                "Type": "int",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "PRI",
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": "clé primaire"
+              },
+              {
+                "Field": "code",
+                "Type": "varchar",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "UNIQUE",
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "libelle",
+                "Type": "varchar",
+                "IS_NULLABLE": "YES",
+                "Default": null,
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              }
+            ]
+          },
+          "les_types": [
+            "add",
+            "edit",
+            "list",
+            "details",
+            "type"
+          ]
+        },
+        {
+          "table": "user_documents",
+          "description": [
+            "id_doc",
+            "user_id",
+            "document_type",
+            "url_document",
+            "statut",
+            "remarque_admin",
+            "date_upload"
+          ],
+          "table_descriptions": {
+            "table_name": "user_documents",
+            "cle_primaire": {
+              "Field": "id_doc",
+              "Type": "bigint",
+              "IS_NULLABLE": "NO",
+              "Default": null,
+              "Extra": "",
+              "Key": "PRI",
+              "REFERENCED_TABLE_NAME": null,
+              "REFERENCED_COLUMN_NAME": null,
+              "explications": "clé primaire"
+            },
+            "les_colonnes": [
+              {
+                "Field": "id_doc",
+                "Type": "bigint",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "PRI",
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": "clé primaire"
+              },
+              {
+                "Field": "user_id",
+                "Type": "bigint",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "MUL",
+                "REFERENCED_TABLE_NAME": "users",
+                "REFERENCED_COLUMN_NAME": "id",
+                "explications": "clé étrangère liée à la colonne id de la table users"
+              },
+              {
+                "Field": "document_type",
+                "Type": "varchar",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "url_document",
+                "Type": "text",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "statut",
+                "Type": "enum",
+                "IS_NULLABLE": "YES",
+                "Default": "pending",
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "remarque_admin",
+                "Type": "text",
+                "IS_NULLABLE": "YES",
+                "Default": null,
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "date_upload",
+                "Type": "timestamp",
+                "IS_NULLABLE": "YES",
+                "Default": "CURRENT_TIMESTAMP",
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              }
+            ]
+          },
+          "les_types": [
+            "add",
+            "edit",
+            "list",
+            "details",
+            "type"
+          ]
+        },
+        {
+          "table": "users",
+          "description": [
+            "id",
+            "uuid",
+            "role_id",
+            "prenom",
+            "nom",
+            "email",
+            "telephone",
+            "password_hash",
+            "statut_user_id",
+            "is_verified",
+            "date_creation",
+            "last_login"
+          ],
+          "table_descriptions": {
+            "table_name": "users",
+            "cle_primaire": {
+              "Field": "id",
+              "Type": "bigint",
+              "IS_NULLABLE": "NO",
+              "Default": null,
+              "Extra": "",
+              "Key": "PRI",
+              "REFERENCED_TABLE_NAME": null,
+              "REFERENCED_COLUMN_NAME": null,
+              "explications": "clé primaire"
+            },
+            "les_colonnes": [
+              {
+                "Field": "id",
+                "Type": "bigint",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "PRI",
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": "clé primaire"
+              },
+              {
+                "Field": "uuid",
+                "Type": "char",
+                "IS_NULLABLE": "NO",
+                "Default": "uuid()",
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "role_id",
+                "Type": "int",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "MUL",
+                "REFERENCED_TABLE_NAME": "roles",
+                "REFERENCED_COLUMN_NAME": "id_role",
+                "explications": "clé étrangère liée à la colonne id_role de la table roles"
+              },
+              {
+                "Field": "prenom",
+                "Type": "varchar",
+                "IS_NULLABLE": "YES",
+                "Default": null,
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "nom",
+                "Type": "varchar",
+                "IS_NULLABLE": "YES",
+                "Default": null,
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "email",
+                "Type": "varchar",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "UNIQUE",
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "telephone",
+                "Type": "varchar",
+                "IS_NULLABLE": "YES",
+                "Default": null,
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "password_hash",
+                "Type": "varchar",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "statut_user_id",
+                "Type": "int",
+                "IS_NULLABLE": "YES",
+                "Default": "1",
+                "Extra": "",
+                "Key": "MUL",
+                "REFERENCED_TABLE_NAME": "statut_user",
+                "REFERENCED_COLUMN_NAME": "id_statut_user",
+                "explications": "clé étrangère liée à la colonne id_statut_user de la table statut_user"
+              },
+              {
+                "Field": "is_verified",
+                "Type": "tinyint",
+                "IS_NULLABLE": "YES",
+                "Default": "0",
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "date_creation",
+                "Type": "timestamp",
+                "IS_NULLABLE": "YES",
+                "Default": "CURRENT_TIMESTAMP",
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "last_login",
+                "Type": "timestamp",
+                "IS_NULLABLE": "YES",
+                "Default": null,
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              }
+            ]
+          },
+          "les_types": [
+            "add",
+            "edit",
+            "list",
+            "details",
+            "type"
+          ]
+        },
+        {
+          "table": "zones",
+          "description": [
+            "id_zone",
+            "region_id",
+            "code_zone",
+            "libelle",
+            "latitude",
+            "longitude"
+          ],
+          "table_descriptions": {
+            "table_name": "zones",
+            "cle_primaire": {
+              "Field": "id_zone",
+              "Type": "int",
+              "IS_NULLABLE": "NO",
+              "Default": null,
+              "Extra": "",
+              "Key": "PRI",
+              "REFERENCED_TABLE_NAME": null,
+              "REFERENCED_COLUMN_NAME": null,
+              "explications": "clé primaire"
+            },
+            "les_colonnes": [
+              {
+                "Field": "id_zone",
+                "Type": "int",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "PRI",
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": "clé primaire"
+              },
+              {
+                "Field": "region_id",
+                "Type": "int",
+                "IS_NULLABLE": "NO",
+                "Default": null,
+                "Extra": "",
+                "Key": "MUL",
+                "REFERENCED_TABLE_NAME": "regions",
+                "REFERENCED_COLUMN_NAME": "id_region",
+                "explications": "clé étrangère liée à la colonne id_region de la table regions"
+              },
+              {
+                "Field": "code_zone",
+                "Type": "varchar",
+                "IS_NULLABLE": "YES",
+                "Default": null,
+                "Extra": "",
+                "Key": "UNIQUE",
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "libelle",
+                "Type": "varchar",
+                "IS_NULLABLE": "YES",
+                "Default": null,
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "latitude",
+                "Type": "decimal",
+                "IS_NULLABLE": "YES",
+                "Default": null,
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              },
+              {
+                "Field": "longitude",
+                "Type": "decimal",
+                "IS_NULLABLE": "YES",
+                "Default": null,
+                "Extra": "",
+                "Key": null,
+                "REFERENCED_TABLE_NAME": null,
+                "REFERENCED_COLUMN_NAME": null,
+                "explications": ""
+              }
+            ]
+          },
+          "les_types": [
+            "add",
+            "edit",
+            "list",
+            "details",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "public",
+      "les_tables": [
+        {
+          "table": "login",
+          "description": [
+            "login",
+            "pwd"
+          ],
+          "les_types": [
+            "login"
+          ]
+        }
+      ]
+    }
+  ]
+}

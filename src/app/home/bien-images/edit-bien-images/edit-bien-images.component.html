@@ -1,0 +1,68 @@
+<div class="modal-header" data-bs-theme="ligth">
+        <h1 class="modal-title fs-5">Modifier bien_images</h1>
+        <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.close()"></button>
+    </div>
+    <div class="modal-body">
+      <form [formGroup]="reactiveForm_edit_bien_images" (ngSubmit)="onSubmit_edit_bien_images()" #form_edit_bien_images="ngForm" class="row">
+        
+<!-- Erreur : La clé étrangère bien_id de la table bien_images n'est pas référencée -->
+
+            <!-- Champ Url Image -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="url_image">Url Image</label>
+              <input id="url_image" class="form-control" 
+                     type="text" 
+                     formControlName="url_image" 
+                     placeholder="Url Image"  
+                     [ngClass]="{ 'is-invalid': submitted && f.url_image.errors }"/>
+              @if (submitted && f.url_image.errors) {
+                <div class="invalid-feedback">
+                  @if (f.url_image.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+
+            <!-- Champ Ordre -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="ordre">Ordre</label>
+              <input id="ordre" class="form-control" 
+                     type="text" 
+                     formControlName="ordre" 
+                     placeholder="Ordre"  
+                     [ngClass]="{ 'is-invalid': submitted && f.ordre.errors }"/>
+              @if (submitted && f.ordre.errors) {
+                <div class="invalid-feedback">
+                  @if (f.ordre.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+
+            <!-- Champ Date Upload -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="date_upload">Date Upload</label>
+              <input id="date_upload" class="form-control" 
+                     type="text" 
+                     formControlName="date_upload" 
+                     placeholder="Date Upload"  
+                     [ngClass]="{ 'is-invalid': submitted && f.date_upload.errors }"/>
+              @if (submitted && f.date_upload.errors) {
+                <div class="invalid-feedback">
+                  @if (f.date_upload.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-primary m-2" [disabled]="loading_edit_bien_images ||
+      loading_get_details_edit_bien_images_form" (click)="form_edit_bien_images.ngSubmit.emit()">
+          {{ loading_edit_bien_images ? "En cours ..." : "Valider" }}
+      </button>
+      <button type="button" class="btn btn-outline-danger" (click)="activeModal.close()">Fermer</button>
+    </div>

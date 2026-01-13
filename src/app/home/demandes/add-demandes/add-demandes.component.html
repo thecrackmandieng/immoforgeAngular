@@ -1,0 +1,158 @@
+<div class="modal-header" data-bs-theme="ligth">
+      <h1 class="modal-title fs-5">Ajouter demandes</h1>
+      <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.close()"></button>
+    </div>
+    <div class="modal-body">
+      <form [formGroup]="reactiveForm_add_demandes" 
+            (ngSubmit)="onSubmit_add_demandes()" 
+            #form_add_demandes="ngForm" 
+            class="row">
+        
+            <!-- Champ Uuid -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="uuid">Uuid</label>
+              <input id="uuid" class="form-control" 
+                     type="text" 
+                     formControlName="uuid" 
+                     placeholder="Uuid"  
+                     [ngClass]="{ 'is-invalid': submitted && f.uuid.errors }"/>
+              @if (submitted && f.uuid.errors) {
+                <div class="invalid-feedback">
+                  @if (f.uuid.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+<!-- Erreur : La clé étrangère client_user_id de la table demandes n'est pas référencée -->
+<!-- Erreur : La clé étrangère bien_id de la table demandes n'est pas référencée -->
+
+            <!-- Champ Type Demande -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="type_demande">Type Demande</label>
+              <input id="type_demande" class="form-control" 
+                     type="text" 
+                     formControlName="type_demande" 
+                     placeholder="Type Demande"  
+                     [ngClass]="{ 'is-invalid': submitted && f.type_demande.errors }"/>
+              @if (submitted && f.type_demande.errors) {
+                <div class="invalid-feedback">
+                  @if (f.type_demande.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+<!-- Erreur : La clé étrangère etat_demande_id de la table demandes n'est pas référencée -->
+
+            <!-- Champ Date Debut -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="date_debut">Date Debut</label>
+              <input id="date_debut" class="form-control" 
+                     type="text" 
+                     formControlName="date_debut" 
+                     placeholder="Date Debut"  
+                     [ngClass]="{ 'is-invalid': submitted && f.date_debut.errors }"/>
+              @if (submitted && f.date_debut.errors) {
+                <div class="invalid-feedback">
+                  @if (f.date_debut.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+
+            <!-- Champ Date Fin -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="date_fin">Date Fin</label>
+              <input id="date_fin" class="form-control" 
+                     type="text" 
+                     formControlName="date_fin" 
+                     placeholder="Date Fin"  
+                     [ngClass]="{ 'is-invalid': submitted && f.date_fin.errors }"/>
+              @if (submitted && f.date_fin.errors) {
+                <div class="invalid-feedback">
+                  @if (f.date_fin.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+
+            <!-- Champ Montant Estime -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="montant_estime">Montant Estime</label>
+              <input id="montant_estime" class="form-control" 
+                     type="text" 
+                     formControlName="montant_estime" 
+                     placeholder="Montant Estime"  
+                     [ngClass]="{ 'is-invalid': submitted && f.montant_estime.errors }"/>
+              @if (submitted && f.montant_estime.errors) {
+                <div class="invalid-feedback">
+                  @if (f.montant_estime.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+
+            <!-- Champ Acompte Payee -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="acompte_payee">Acompte Payee</label>
+              <input id="acompte_payee" class="form-control" 
+                     type="text" 
+                     formControlName="acompte_payee" 
+                     placeholder="Acompte Payee"  
+                     [ngClass]="{ 'is-invalid': submitted && f.acompte_payee.errors }"/>
+              @if (submitted && f.acompte_payee.errors) {
+                <div class="invalid-feedback">
+                  @if (f.acompte_payee.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+<!-- Erreur : La clé étrangère mode_paiement_acompte_id de la table demandes n'est pas référencée -->
+
+            <!-- Champ Message -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="message">Message</label>
+              <input id="message" class="form-control" 
+                     type="text" 
+                     formControlName="message" 
+                     placeholder="Message"  
+                     [ngClass]="{ 'is-invalid': submitted && f.message.errors }"/>
+              @if (submitted && f.message.errors) {
+                <div class="invalid-feedback">
+                  @if (f.message.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+
+            <!-- Champ Date Demande -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="date_demande">Date Demande</label>
+              <input id="date_demande" class="form-control" 
+                     type="text" 
+                     formControlName="date_demande" 
+                     placeholder="Date Demande"  
+                     [ngClass]="{ 'is-invalid': submitted && f.date_demande.errors }"/>
+              @if (submitted && f.date_demande.errors) {
+                <div class="invalid-feedback">
+                  @if (f.date_demande.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-primary m-2" [disabled]="loading_add_demandes || loading_get_details_add_demandes_form"
+      (click)="form_add_demandes.ngSubmit.emit()">
+      {{ loading_add_demandes ? "En cours ..." : "Valider" }}
+      </button>
+      <button type="button" class="btn btn-outline-danger" (click)="activeModal.close()">Fermer</button>
+    </div>

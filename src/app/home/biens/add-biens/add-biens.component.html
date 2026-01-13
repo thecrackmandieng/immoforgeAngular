@@ -1,0 +1,296 @@
+<div class="modal-header" data-bs-theme="ligth">
+      <h1 class="modal-title fs-5">Ajouter biens</h1>
+      <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.close()"></button>
+    </div>
+    <div class="modal-body">
+      <form [formGroup]="reactiveForm_add_biens" 
+            (ngSubmit)="onSubmit_add_biens()" 
+            #form_add_biens="ngForm" 
+            class="row">
+        
+            <!-- Champ Uuid -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="uuid">Uuid</label>
+              <input id="uuid" class="form-control" 
+                     type="text" 
+                     formControlName="uuid" 
+                     placeholder="Uuid"  
+                     [ngClass]="{ 'is-invalid': submitted && f.uuid.errors }"/>
+              @if (submitted && f.uuid.errors) {
+                <div class="invalid-feedback">
+                  @if (f.uuid.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+<!-- Erreur : La clé étrangère proprietaire_user_id de la table biens n'est pas référencée -->
+<!-- Erreur : La clé étrangère type_bien_id de la table biens n'est pas référencée -->
+<!-- Erreur : La clé étrangère etat_bien_id de la table biens n'est pas référencée -->
+<!-- Erreur : La clé étrangère statut_validation_id de la table biens n'est pas référencée -->
+
+            <!-- Champ Titre -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="titre">Titre</label>
+              <input id="titre" class="form-control" 
+                     type="text" 
+                     formControlName="titre" 
+                     placeholder="Titre"  
+                     [ngClass]="{ 'is-invalid': submitted && f.titre.errors }"/>
+              @if (submitted && f.titre.errors) {
+                <div class="invalid-feedback">
+                  @if (f.titre.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+
+            <!-- Champ Description -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="description">Description</label>
+              <input id="description" class="form-control" 
+                     type="text" 
+                     formControlName="description" 
+                     placeholder="Description"  
+                     [ngClass]="{ 'is-invalid': submitted && f.description.errors }"/>
+              @if (submitted && f.description.errors) {
+                <div class="invalid-feedback">
+                  @if (f.description.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+<!-- Erreur : La clé étrangère region_id de la table biens n'est pas référencée -->
+<!-- Erreur : La clé étrangère zone_id de la table biens n'est pas référencée -->
+
+            <!-- Champ Adresse Detaillee -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="adresse_detaillee">Adresse Detaillee</label>
+              <input id="adresse_detaillee" class="form-control" 
+                     type="text" 
+                     formControlName="adresse_detaillee" 
+                     placeholder="Adresse Detaillee"  
+                     [ngClass]="{ 'is-invalid': submitted && f.adresse_detaillee.errors }"/>
+              @if (submitted && f.adresse_detaillee.errors) {
+                <div class="invalid-feedback">
+                  @if (f.adresse_detaillee.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+
+            <!-- Champ Latitude -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="latitude">Latitude</label>
+              <input id="latitude" class="form-control" 
+                     type="text" 
+                     formControlName="latitude" 
+                     placeholder="Latitude"  
+                     [ngClass]="{ 'is-invalid': submitted && f.latitude.errors }"/>
+              @if (submitted && f.latitude.errors) {
+                <div class="invalid-feedback">
+                  @if (f.latitude.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+
+            <!-- Champ Longitude -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="longitude">Longitude</label>
+              <input id="longitude" class="form-control" 
+                     type="text" 
+                     formControlName="longitude" 
+                     placeholder="Longitude"  
+                     [ngClass]="{ 'is-invalid': submitted && f.longitude.errors }"/>
+              @if (submitted && f.longitude.errors) {
+                <div class="invalid-feedback">
+                  @if (f.longitude.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+
+            <!-- Champ Superficie -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="superficie">Superficie</label>
+              <input id="superficie" class="form-control" 
+                     type="text" 
+                     formControlName="superficie" 
+                     placeholder="Superficie"  
+                     [ngClass]="{ 'is-invalid': submitted && f.superficie.errors }"/>
+              @if (submitted && f.superficie.errors) {
+                <div class="invalid-feedback">
+                  @if (f.superficie.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+
+            <!-- Champ Chambres -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="chambres">Chambres</label>
+              <input id="chambres" class="form-control" 
+                     type="text" 
+                     formControlName="chambres" 
+                     placeholder="Chambres"  
+                     [ngClass]="{ 'is-invalid': submitted && f.chambres.errors }"/>
+              @if (submitted && f.chambres.errors) {
+                <div class="invalid-feedback">
+                  @if (f.chambres.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+
+            <!-- Champ Salles Bain -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="salles_bain">Salles Bain</label>
+              <input id="salles_bain" class="form-control" 
+                     type="text" 
+                     formControlName="salles_bain" 
+                     placeholder="Salles Bain"  
+                     [ngClass]="{ 'is-invalid': submitted && f.salles_bain.errors }"/>
+              @if (submitted && f.salles_bain.errors) {
+                <div class="invalid-feedback">
+                  @if (f.salles_bain.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+
+            <!-- Champ Capacite -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="capacite">Capacite</label>
+              <input id="capacite" class="form-control" 
+                     type="text" 
+                     formControlName="capacite" 
+                     placeholder="Capacite"  
+                     [ngClass]="{ 'is-invalid': submitted && f.capacite.errors }"/>
+              @if (submitted && f.capacite.errors) {
+                <div class="invalid-feedback">
+                  @if (f.capacite.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+
+            <!-- Champ Prix -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="prix">Prix</label>
+              <input id="prix" class="form-control" 
+                     type="text" 
+                     formControlName="prix" 
+                     placeholder="Prix"  
+                     [ngClass]="{ 'is-invalid': submitted && f.prix.errors }"/>
+              @if (submitted && f.prix.errors) {
+                <div class="invalid-feedback">
+                  @if (f.prix.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+
+            <!-- Champ Devise -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="devise">Devise</label>
+              <input id="devise" class="form-control" 
+                     type="text" 
+                     formControlName="devise" 
+                     placeholder="Devise"  
+                     [ngClass]="{ 'is-invalid': submitted && f.devise.errors }"/>
+              @if (submitted && f.devise.errors) {
+                <div class="invalid-feedback">
+                  @if (f.devise.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+
+            <!-- Champ Date Publication -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="date_publication">Date Publication</label>
+              <input id="date_publication" class="form-control" 
+                     type="text" 
+                     formControlName="date_publication" 
+                     placeholder="Date Publication"  
+                     [ngClass]="{ 'is-invalid': submitted && f.date_publication.errors }"/>
+              @if (submitted && f.date_publication.errors) {
+                <div class="invalid-feedback">
+                  @if (f.date_publication.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+
+            <!-- Champ Date Modification -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="date_modification">Date Modification</label>
+              <input id="date_modification" class="form-control" 
+                     type="text" 
+                     formControlName="date_modification" 
+                     placeholder="Date Modification"  
+                     [ngClass]="{ 'is-invalid': submitted && f.date_modification.errors }"/>
+              @if (submitted && f.date_modification.errors) {
+                <div class="invalid-feedback">
+                  @if (f.date_modification.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+
+            <!-- Champ Raison Refus -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="raison_refus">Raison Refus</label>
+              <input id="raison_refus" class="form-control" 
+                     type="text" 
+                     formControlName="raison_refus" 
+                     placeholder="Raison Refus"  
+                     [ngClass]="{ 'is-invalid': submitted && f.raison_refus.errors }"/>
+              @if (submitted && f.raison_refus.errors) {
+                <div class="invalid-feedback">
+                  @if (f.raison_refus.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+
+            <!-- Champ Is Archived -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="is_archived">Is Archived</label>
+              <input id="is_archived" class="form-control" 
+                     type="text" 
+                     formControlName="is_archived" 
+                     placeholder="Is Archived"  
+                     [ngClass]="{ 'is-invalid': submitted && f.is_archived.errors }"/>
+              @if (submitted && f.is_archived.errors) {
+                <div class="invalid-feedback">
+                  @if (f.is_archived.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-primary m-2" [disabled]="loading_add_biens || loading_get_details_add_biens_form"
+      (click)="form_add_biens.ngSubmit.emit()">
+      {{ loading_add_biens ? "En cours ..." : "Valider" }}
+      </button>
+      <button type="button" class="btn btn-outline-danger" (click)="activeModal.close()">Fermer</button>
+    </div>

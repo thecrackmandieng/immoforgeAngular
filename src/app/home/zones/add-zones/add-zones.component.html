@@ -1,0 +1,87 @@
+<div class="modal-header" data-bs-theme="ligth">
+      <h1 class="modal-title fs-5">Ajouter zones</h1>
+      <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.close()"></button>
+    </div>
+    <div class="modal-body">
+      <form [formGroup]="reactiveForm_add_zones" 
+            (ngSubmit)="onSubmit_add_zones()" 
+            #form_add_zones="ngForm" 
+            class="row">
+        <!-- Erreur : La clé étrangère region_id de la table zones n'est pas référencée -->
+
+            <!-- Champ Code Zone -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="code_zone">Code Zone</label>
+              <input id="code_zone" class="form-control" 
+                     type="text" 
+                     formControlName="code_zone" 
+                     placeholder="Code Zone"  
+                     [ngClass]="{ 'is-invalid': submitted && f.code_zone.errors }"/>
+              @if (submitted && f.code_zone.errors) {
+                <div class="invalid-feedback">
+                  @if (f.code_zone.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+
+            <!-- Champ Libelle -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="libelle">Libelle</label>
+              <input id="libelle" class="form-control" 
+                     type="text" 
+                     formControlName="libelle" 
+                     placeholder="Libelle"  
+                     [ngClass]="{ 'is-invalid': submitted && f.libelle.errors }"/>
+              @if (submitted && f.libelle.errors) {
+                <div class="invalid-feedback">
+                  @if (f.libelle.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+
+            <!-- Champ Latitude -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="latitude">Latitude</label>
+              <input id="latitude" class="form-control" 
+                     type="text" 
+                     formControlName="latitude" 
+                     placeholder="Latitude"  
+                     [ngClass]="{ 'is-invalid': submitted && f.latitude.errors }"/>
+              @if (submitted && f.latitude.errors) {
+                <div class="invalid-feedback">
+                  @if (f.latitude.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+
+            <!-- Champ Longitude -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="longitude">Longitude</label>
+              <input id="longitude" class="form-control" 
+                     type="text" 
+                     formControlName="longitude" 
+                     placeholder="Longitude"  
+                     [ngClass]="{ 'is-invalid': submitted && f.longitude.errors }"/>
+              @if (submitted && f.longitude.errors) {
+                <div class="invalid-feedback">
+                  @if (f.longitude.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-primary m-2" [disabled]="loading_add_zones || loading_get_details_add_zones_form"
+      (click)="form_add_zones.ngSubmit.emit()">
+      {{ loading_add_zones ? "En cours ..." : "Valider" }}
+      </button>
+      <button type="button" class="btn btn-outline-danger" (click)="activeModal.close()">Fermer</button>
+    </div>

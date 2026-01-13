@@ -1,0 +1,20 @@
+<div class="modal-header" data-bs-theme="ligth">
+      <h1 class="modal-title fs-5">Ajouter role_permission</h1>
+      <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.close()"></button>
+    </div>
+    <div class="modal-body">
+      <form [formGroup]="reactiveForm_add_role_permission" 
+            (ngSubmit)="onSubmit_add_role_permission()" 
+            #form_add_role_permission="ngForm" 
+            class="row">
+        <!-- Erreur : La clé étrangère id_role de la table role_permission n'est pas référencée -->
+<!-- Erreur : La clé étrangère id_perm de la table role_permission n'est pas référencée -->
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-primary m-2" [disabled]="loading_add_role_permission || loading_get_details_add_role_permission_form"
+      (click)="form_add_role_permission.ngSubmit.emit()">
+      {{ loading_add_role_permission ? "En cours ..." : "Valider" }}
+      </button>
+      <button type="button" class="btn btn-outline-danger" (click)="activeModal.close()">Fermer</button>
+    </div>

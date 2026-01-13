@@ -1,0 +1,152 @@
+<div class="modal-header" data-bs-theme="ligth">
+        <h1 class="modal-title fs-5">Modifier plans_tarifaires</h1>
+        <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.close()"></button>
+    </div>
+    <div class="modal-body">
+      <form [formGroup]="reactiveForm_edit_plans_tarifaires" (ngSubmit)="onSubmit_edit_plans_tarifaires()" #form_edit_plans_tarifaires="ngForm" class="row">
+        
+
+            <!-- Champ Code -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="code">Code</label>
+              <input id="code" class="form-control" 
+                     type="text" 
+                     formControlName="code" 
+                     placeholder="Code"  
+                     [ngClass]="{ 'is-invalid': submitted && f.code.errors }"/>
+              @if (submitted && f.code.errors) {
+                <div class="invalid-feedback">
+                  @if (f.code.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+
+            <!-- Champ Libelle -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="libelle">Libelle</label>
+              <input id="libelle" class="form-control" 
+                     type="text" 
+                     formControlName="libelle" 
+                     placeholder="Libelle"  
+                     [ngClass]="{ 'is-invalid': submitted && f.libelle.errors }"/>
+              @if (submitted && f.libelle.errors) {
+                <div class="invalid-feedback">
+                  @if (f.libelle.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+
+            <!-- Champ Prix Mensuel -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="prix_mensuel">Prix Mensuel</label>
+              <input id="prix_mensuel" class="form-control" 
+                     type="text" 
+                     formControlName="prix_mensuel" 
+                     placeholder="Prix Mensuel"  
+                     [ngClass]="{ 'is-invalid': submitted && f.prix_mensuel.errors }"/>
+              @if (submitted && f.prix_mensuel.errors) {
+                <div class="invalid-feedback">
+                  @if (f.prix_mensuel.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+
+            <!-- Champ Nb Biens Max -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="nb_biens_max">Nb Biens Max</label>
+              <input id="nb_biens_max" class="form-control" 
+                     type="text" 
+                     formControlName="nb_biens_max" 
+                     placeholder="Nb Biens Max"  
+                     [ngClass]="{ 'is-invalid': submitted && f.nb_biens_max.errors }"/>
+              @if (submitted && f.nb_biens_max.errors) {
+                <div class="invalid-feedback">
+                  @if (f.nb_biens_max.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+
+            <!-- Champ Boost Visibilite -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="boost_visibilite">Boost Visibilite</label>
+              <input id="boost_visibilite" class="form-control" 
+                     type="text" 
+                     formControlName="boost_visibilite" 
+                     placeholder="Boost Visibilite"  
+                     [ngClass]="{ 'is-invalid': submitted && f.boost_visibilite.errors }"/>
+              @if (submitted && f.boost_visibilite.errors) {
+                <div class="invalid-feedback">
+                  @if (f.boost_visibilite.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+
+            <!-- Champ Stats Avancees -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="stats_avancees">Stats Avancees</label>
+              <input id="stats_avancees" class="form-control" 
+                     type="text" 
+                     formControlName="stats_avancees" 
+                     placeholder="Stats Avancees"  
+                     [ngClass]="{ 'is-invalid': submitted && f.stats_avancees.errors }"/>
+              @if (submitted && f.stats_avancees.errors) {
+                <div class="invalid-feedback">
+                  @if (f.stats_avancees.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+
+            <!-- Champ Badge Verifie -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="badge_verifie">Badge Verifie</label>
+              <input id="badge_verifie" class="form-control" 
+                     type="text" 
+                     formControlName="badge_verifie" 
+                     placeholder="Badge Verifie"  
+                     [ngClass]="{ 'is-invalid': submitted && f.badge_verifie.errors }"/>
+              @if (submitted && f.badge_verifie.errors) {
+                <div class="invalid-feedback">
+                  @if (f.badge_verifie.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+
+            <!-- Champ Actif -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="actif">Actif</label>
+              <input id="actif" class="form-control" 
+                     type="text" 
+                     formControlName="actif" 
+                     placeholder="Actif"  
+                     [ngClass]="{ 'is-invalid': submitted && f.actif.errors }"/>
+              @if (submitted && f.actif.errors) {
+                <div class="invalid-feedback">
+                  @if (f.actif.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-primary m-2" [disabled]="loading_edit_plans_tarifaires ||
+      loading_get_details_edit_plans_tarifaires_form" (click)="form_edit_plans_tarifaires.ngSubmit.emit()">
+          {{ loading_edit_plans_tarifaires ? "En cours ..." : "Valider" }}
+      </button>
+      <button type="button" class="btn btn-outline-danger" (click)="activeModal.close()">Fermer</button>
+    </div>

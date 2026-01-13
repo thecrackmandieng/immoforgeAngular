@@ -1,0 +1,84 @@
+<div class="modal-header" data-bs-theme="ligth">
+        <h1 class="modal-title fs-5">Modifier regles_commission</h1>
+        <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.close()"></button>
+    </div>
+    <div class="modal-body">
+      <form [formGroup]="reactiveForm_edit_regles_commission" (ngSubmit)="onSubmit_edit_regles_commission()" #form_edit_regles_commission="ngForm" class="row">
+        
+
+            <!-- Champ Type Transaction -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="type_transaction">Type Transaction</label>
+              <input id="type_transaction" class="form-control" 
+                     type="text" 
+                     formControlName="type_transaction" 
+                     placeholder="Type Transaction"  
+                     [ngClass]="{ 'is-invalid': submitted && f.type_transaction.errors }"/>
+              @if (submitted && f.type_transaction.errors) {
+                <div class="invalid-feedback">
+                  @if (f.type_transaction.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+
+            <!-- Champ Pourcentage -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="pourcentage">Pourcentage</label>
+              <input id="pourcentage" class="form-control" 
+                     type="text" 
+                     formControlName="pourcentage" 
+                     placeholder="Pourcentage"  
+                     [ngClass]="{ 'is-invalid': submitted && f.pourcentage.errors }"/>
+              @if (submitted && f.pourcentage.errors) {
+                <div class="invalid-feedback">
+                  @if (f.pourcentage.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+
+            <!-- Champ Montant Fixe -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="montant_fixe">Montant Fixe</label>
+              <input id="montant_fixe" class="form-control" 
+                     type="text" 
+                     formControlName="montant_fixe" 
+                     placeholder="Montant Fixe"  
+                     [ngClass]="{ 'is-invalid': submitted && f.montant_fixe.errors }"/>
+              @if (submitted && f.montant_fixe.errors) {
+                <div class="invalid-feedback">
+                  @if (f.montant_fixe.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+
+            <!-- Champ Actif -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="actif">Actif</label>
+              <input id="actif" class="form-control" 
+                     type="text" 
+                     formControlName="actif" 
+                     placeholder="Actif"  
+                     [ngClass]="{ 'is-invalid': submitted && f.actif.errors }"/>
+              @if (submitted && f.actif.errors) {
+                <div class="invalid-feedback">
+                  @if (f.actif.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-primary m-2" [disabled]="loading_edit_regles_commission ||
+      loading_get_details_edit_regles_commission_form" (click)="form_edit_regles_commission.ngSubmit.emit()">
+          {{ loading_edit_regles_commission ? "En cours ..." : "Valider" }}
+      </button>
+      <button type="button" class="btn btn-outline-danger" (click)="activeModal.close()">Fermer</button>
+    </div>

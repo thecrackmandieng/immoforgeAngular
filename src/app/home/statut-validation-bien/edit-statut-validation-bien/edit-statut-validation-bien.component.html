@@ -1,0 +1,50 @@
+<div class="modal-header" data-bs-theme="ligth">
+        <h1 class="modal-title fs-5">Modifier statut_validation_bien</h1>
+        <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.close()"></button>
+    </div>
+    <div class="modal-body">
+      <form [formGroup]="reactiveForm_edit_statut_validation_bien" (ngSubmit)="onSubmit_edit_statut_validation_bien()" #form_edit_statut_validation_bien="ngForm" class="row">
+        
+
+            <!-- Champ Code -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="code">Code</label>
+              <input id="code" class="form-control" 
+                     type="text" 
+                     formControlName="code" 
+                     placeholder="Code"  
+                     [ngClass]="{ 'is-invalid': submitted && f.code.errors }"/>
+              @if (submitted && f.code.errors) {
+                <div class="invalid-feedback">
+                  @if (f.code.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+
+            <!-- Champ Libelle -->
+            <div class="form-group col-sm-12">
+              <label class="form-label" for="libelle">Libelle</label>
+              <input id="libelle" class="form-control" 
+                     type="text" 
+                     formControlName="libelle" 
+                     placeholder="Libelle"  
+                     [ngClass]="{ 'is-invalid': submitted && f.libelle.errors }"/>
+              @if (submitted && f.libelle.errors) {
+                <div class="invalid-feedback">
+                  @if (f.libelle.errors.required) {
+                    <div>Ce champ est obligatoire</div>
+                  }
+                </div>
+              }
+            </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-primary m-2" [disabled]="loading_edit_statut_validation_bien ||
+      loading_get_details_edit_statut_validation_bien_form" (click)="form_edit_statut_validation_bien.ngSubmit.emit()">
+          {{ loading_edit_statut_validation_bien ? "En cours ..." : "Valider" }}
+      </button>
+      <button type="button" class="btn btn-outline-danger" (click)="activeModal.close()">Fermer</button>
+    </div>
